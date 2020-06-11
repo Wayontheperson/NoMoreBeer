@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ka3cjlpF7sUYj5nzReKxrwOX4Fse/VpvZOWtDNaCUGGXt2cdAOQ9IONvo9hq/YmnfmzHCOwxNvWGwAsUmdpIBQ==",
+  "success": true,
+  "projectFilePath": "C:\\sync\\603R\\sources\\NoMoreBeer\\WinterIsComing\\WinterIsComing.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kccistc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

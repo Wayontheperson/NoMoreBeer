@@ -1,0 +1,17 @@
+C:\sync\603R\sources\NoMoreBeer\NoMoreBeer\bin\Debug\data\KODEX레버리지.csv
+C:\sync\603R\sources\NoMoreBeer\NoMoreBeer\bin\Debug\data\KODEX코스닥150.csv
+C:\sync\603R\sources\NoMoreBeer\NoMoreBeer\bin\Debug\data\KODEX코스피.csv
+C:\sync\603R\sources\NoMoreBeer\NoMoreBeer\bin\Debug\data\KT.csv
+C:\sync\603R\sources\NoMoreBeer\NoMoreBeer\bin\Debug\data\LG유플러스.csv
+C:\sync\603R\sources\NoMoreBeer\NoMoreBeer\bin\Debug\data\SK텔레콤.csv
+C:\sync\603R\sources\NoMoreBeer\NoMoreBeer\bin\Debug\data\SPY.csv
+C:\sync\603R\sources\NoMoreBeer\NoMoreBeer\bin\Debug\data\네이버.csv
+C:\sync\603R\sources\NoMoreBeer\NoMoreBeer\bin\Debug\data\삼성전자.csv
+C:\sync\603R\sources\NoMoreBeer\NoMoreBeer\bin\Debug\data\카카오.csv
+C:\sync\603R\sources\NoMoreBeer\NoMoreBeer\bin\Debug\NoMoreBeer.exe.config
+C:\sync\603R\sources\NoMoreBeer\NoMoreBeer\bin\Debug\NoMoreBeer.exe
+C:\sync\603R\sources\NoMoreBeer\NoMoreBeer\bin\Debug\NoMoreBeer.pdb
+C:\sync\603R\sources\NoMoreBeer\NoMoreBeer\obj\Debug\NoMoreBeer.csprojAssemblyReference.cache
+C:\sync\603R\sources\NoMoreBeer\NoMoreBeer\obj\Debug\NoMoreBeer.csproj.CoreCompileInputs.cache
+C:\sync\603R\sources\NoMoreBeer\NoMoreBeer\obj\Debug\NoMoreBeer.exe
+C:\sync\603R\sources\NoMoreBeer\NoMoreBeer\obj\Debug\NoMoreBeer.pdb
