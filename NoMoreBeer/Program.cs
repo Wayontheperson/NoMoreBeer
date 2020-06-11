@@ -20,7 +20,7 @@ namespace NoMoreBeer
         static void Main(string[] args)
         {
             Deposit deposit=new Deposit();
-            deposit.InvestMoney(50000000);
+            deposit.DepositMoney(50000000);
             List<Price> prices = PriceRepository.Instance.Load(StockName, FromDate); // Price타입 리스트
 
             //Strategy strategy = new OnePerDayStrategy();

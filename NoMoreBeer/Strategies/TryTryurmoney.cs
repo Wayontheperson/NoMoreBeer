@@ -8,14 +8,15 @@ namespace NoMoreBeer.Strategies
      /// </summary>
     public class TryTryurmoney: Strategy
     {
-        public static int BuyDate = 30;
-        public static int SellDate = 0;
+        public static int BuyDate=31 ;
+        
+        public static int SellDate=31 ;
         protected override void Buy(List<Price> prices)
         {
             decimal avg=prices.Skip(BuyDate).Take(30).Average(x=>x.Value);
             for (BuyDate=SellDate; BuyDate < prices.Count; BuyDate++)
             {
-                if (prices[BuyDate].LowValue <= avg*(decimal)0.9) 
+                if (prices[BuyDate].LowValue <= avg*(decimal)0.95) 
                     // 한달간 주식값 평균
                     // 평균보다 20% 값 떨어지면 구매
                 {
@@ -31,7 +32,7 @@ namespace NoMoreBeer.Strategies
         {
             for (SellDate = BuyDate; SellDate < prices.Count; SellDate++)
             {
-                if (prices[SellDate].Hightvalue > (prices[BuyDate].Hightvalue) * (decimal) (1.1))
+                if (prices[SellDate].Hightvalue > (prices[BuyDate].LowValue) * (decimal) (1.05))
                 {
                     Trade trade=new Trade();
                     SellAll(trade, prices);
