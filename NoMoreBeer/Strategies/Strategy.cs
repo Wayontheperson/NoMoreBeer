@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Xml.Schema;
 
 namespace NoMoreBeer.Strategies
 {
@@ -41,7 +42,7 @@ namespace NoMoreBeer.Strategies
             BuySum = Trades.Sum(x => x.BuyValue);
             SellSum = Trades.Sum(x => x.SellValue);
             Rate = BuySum.GetRate(SellSum);
-            //PriceCurve=BuySum.CurveRate(BuySum)
+           
         }
 
         /// <summary>
@@ -70,9 +71,25 @@ namespace NoMoreBeer.Strategies
         {
             Trade trade = new Trade();
             trade.BuyOn = price.Date;
-            trade.BuyValue = price.Hightvalue;
+            trade.BuyValue = price.LowValue;
 
             Trades.Add(trade);
+        }
+
+        protected void BuyAll(List<Price> prices)
+        {
+            Deposit deposit=new Deposit();
+            Trade trade=new Trade();
+            StockVolume stock=new StockVolume();
+            decimal total = 0;
+            
+            while (total< deposit.money)
+            {
+                total+=prices[TryTryurmoney.BuyDate].LowValue;
+                stock.NumberOfVolume();
+            }
+            trade.BuyOn = prices[TryTryurmoney.BuyDate].Date;
+            trade.BuyValue = total;
         }
 
         protected void SellOne(Trade trade, Price price)
@@ -80,6 +97,14 @@ namespace NoMoreBeer.Strategies
             trade.SellValue = price.Hightvalue;
             trade.SellOn = price.Date;
             trade.Rate = trade.BuyValue.GetRate(trade.SellValue);
+        }
+
+        protected void SellAll(Trade trade, List<Price> prices)
+        {
+            trade.SellOn = prices[TryTryurmoney.SellDate].Date;
+            trade.Rate = trade.BuyValue.GetRate(trade.SellValue);
+            trade.SellValue =prices[TryTryurmoney.SellDate].Hightvalue*(StockVolume.volume) ;
+            StockVolume.VolumeClear();
         }
     }
 }

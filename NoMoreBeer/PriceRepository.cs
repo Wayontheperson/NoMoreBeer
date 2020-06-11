@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data.SqlTypes;
 using System.IO;
+using System.Linq;
+using System.Xml.XPath;
 
 namespace NoMoreBeer
 {
@@ -39,7 +41,7 @@ namespace NoMoreBeer
             string[] lines = File.ReadAllLines($@"data\{stockName}.csv");
 
             List<Price> prices = new List<Price>(lines.Length);
-
+            
             for (int i = 1; i < lines.Length; i++)
             {
                 //Price price = new Price(lines[i]);
@@ -55,7 +57,8 @@ namespace NoMoreBeer
 
             for (int i = 1; i < prices.Count; i++)
             {
-                prices[i].Rate = prices[i - 1].Hightvalue.GetRate(prices[i].Hightvalue);// RATE 질문 어떻게 INSTANT정의가 되는지
+                
+                prices[i].Rate = prices[i - 1].LowValue.GetRate(prices[i].Hightvalue);// RATE 질문 어떻게 INSTANT정의가 되는지
             }
 
             return prices;

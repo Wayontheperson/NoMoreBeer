@@ -11,11 +11,12 @@ namespace NoMoreBeer
     /// </summary>
     public class Price
     {
-        private Price(DateTime date, decimal hightvalue,decimal lowvalue) 
+        private Price(DateTime date, decimal hightvalue,decimal lowvalue,decimal value) 
         {
             Date = date;
             Hightvalue = hightvalue;
-            LowValue =lowvalue
+            LowValue = lowvalue;
+            Value = value;
         }
 
         
@@ -35,6 +36,11 @@ namespace NoMoreBeer
         /// </summary>
         public decimal LowValue { get; }
         
+        /// <summary>
+        /// 주가 (종가)
+        /// </summary>
+        public decimal Value { get; }
+        
         
         /// <summary>
         /// 전일 대비 등락률
@@ -52,10 +58,11 @@ namespace NoMoreBeer
             {
                 string[] tokens = line.Split(',');
                 DateTime date = DateTime.Parse(tokens[0]);
-                decimal HighValue = decimal.Parse(tokens[2]);
-                decimal LowValue = decimal.Parse(tokens[3]);
+                decimal highValue = decimal.Parse(tokens[2]);
+                decimal lowValue = decimal.Parse(tokens[3]);
+                decimal value = decimal.Parse(tokens[4]);
 
-                return new Price(date, HighValue,LowValue);
+                return new Price(date, highValue, lowValue, value);
             }
             catch
             {

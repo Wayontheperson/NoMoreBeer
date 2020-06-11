@@ -63,8 +63,10 @@
     <Compile Include="PriceRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategies\Deposit.cs" />
     <Compile Include="Strategies\OnePerDayStrategy.cs" />
     <Compile Include="Strategies\SimpleRateStrategy.cs" />
+    <Compile Include="Strategies\StockVolume.cs" />
     <Compile Include="Strategies\Strategy.cs" />
     <Compile Include="Strategies\TryTryurmoney.cs" />
     <Compile Include="Trade.cs" />
